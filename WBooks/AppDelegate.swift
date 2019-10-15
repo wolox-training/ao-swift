@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Networking
+import AlamofireNetworkActivityLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,9 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        NetworkingBootstrapper.shared.bootstrap()
-
+        if Environment.isTestTarget {
+            return true
+        }
+        
+        /*
+         * Uncomment this and remove this comment once Rollbar service is enabled
+         * and the keys are properly configured in the configuration files.
+         *
+        RollbarService().initialize()
+         *
+         */
+        
+        NetworkActivityLogger.shared.level = .debug
+        NetworkActivityLogger.shared.startLogging()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = ViewController()
         window?.makeKeyAndVisible()
