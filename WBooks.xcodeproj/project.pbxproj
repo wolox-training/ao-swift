@@ -22,7 +22,6 @@
 		9D6E405A1CB1B93A008CE558 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D6E40551CB1B939008CE558 /* ReactiveCocoa.framework */; };
 		9D6E405B1CB1B93A008CE558 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D6E40561CB1B93A008CE558 /* Result.framework */; };
 		B83388D221E93AAC00085E26 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83388CA21E93AAC00085E26 /* Networking.framework */; };
-		B83388D321E93AAC00085E26 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83388CB21E93AAC00085E26 /* KeychainSwift.framework */; };
 		B83388D421E93AAC00085E26 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83388CC21E93AAC00085E26 /* Curry.framework */; };
 		B83388D521E93AAC00085E26 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83388CD21E93AAC00085E26 /* Argo.framework */; };
 		B83388D621E93AAC00085E26 /* AlamofireNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83388CE21E93AAC00085E26 /* AlamofireNetworkActivityLogger.framework */; };
@@ -72,6 +71,10 @@
 		0CCF0029219208080061050C /* WolmoReactiveCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoReactiveCore.framework; path = Carthage/Build/iOS/WolmoReactiveCore.framework; sourceTree = "<group>"; };
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
+		3278DC672357A64E00AD7812 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		3278DC692357A68C00AD7812 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
+		3278DC6A2357A6A400AD7812 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		3278DC6B2357A6B000AD7812 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1575061CB1B27500EA395E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,16 +99,12 @@
 		B83388D021E93AAC00085E26 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		B83388D121E93AAC00085E26 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		CEB934DC1D21992100DF75C2 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		CED934861E8466A60017CF96 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Core.framework; path = Carthage/Build/iOS/Core.framework; sourceTree = "<group>"; };
 		CED934871E8466A60017CF96 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		CED9348A1E8466CE0017CF96 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
-		E12DE1621F772A370072C2FF /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		E1530D981ED378F2002A9002 /* Rollbar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rollbar.framework; path = Carthage/Build/iOS/Rollbar.framework; sourceTree = "<group>"; };
 		E1530D9B1ED37905002A9002 /* RollbarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RollbarService.swift; path = Services/RollbarService.swift; sourceTree = "<group>"; };
 		E1530D9D1ED382EA002A9002 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		E17065121F75B6A10042755C /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		E17065131F75B6A10042755C /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +121,6 @@
 				9D6E405A1CB1B93A008CE558 /* ReactiveCocoa.framework in Frameworks */,
 				9D6E405B1CB1B93A008CE558 /* Result.framework in Frameworks */,
 				B83388D221E93AAC00085E26 /* Networking.framework in Frameworks */,
-				B83388D321E93AAC00085E26 /* KeychainSwift.framework in Frameworks */,
 				B83388D421E93AAC00085E26 /* Curry.framework in Frameworks */,
 				B83388D521E93AAC00085E26 /* Argo.framework in Frameworks */,
 				B83388D621E93AAC00085E26 /* AlamofireNetworkActivityLogger.framework in Frameworks */,
@@ -234,10 +232,10 @@
 		CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */ = {
 			isa = PBXGroup;
 			children = (
-				E17065121F75B6A10042755C /* Debug.xcconfig */,
-				CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */,
-				E17065131F75B6A10042755C /* Release.xcconfig */,
-				E12DE1621F772A370072C2FF /* Production.xcconfig */,
+				3278DC672357A64E00AD7812 /* Debug.xcconfig */,
+				3278DC692357A68C00AD7812 /* Alpha.xcconfig */,
+				3278DC6A2357A6A400AD7812 /* Release.xcconfig */,
+				3278DC6B2357A6B000AD7812 /* Production.xcconfig */,
 			);
 			path = ConfigurationFiles;
 			sourceTree = "<group>";
@@ -341,6 +339,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -396,7 +395,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Wormholy.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/WolmoReactiveCore.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Networking.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework",
@@ -473,7 +471,6 @@
 /* Begin XCBuildConfiguration section */
 		CE39E8751D1DAED00004FE95 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E17065121F75B6A10042755C /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -524,7 +521,6 @@
 		};
 		CE39E8761D1DAED00004FE95 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E17065121F75B6A10042755C /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-debug";
 				CURRENT_PROJECT_VERSION = 1;
@@ -548,7 +544,6 @@
 		};
 		CE39E8771D1DAED00004FE95 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E17065121F75B6A10042755C /* Debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -566,7 +561,6 @@
 		};
 		CE39E8781D1DAED00004FE95 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E17065121F75B6A10042755C /* Debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = WBooksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -579,7 +573,6 @@
 		};
 		CE39E8791D1DAEE70004FE95 /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -629,7 +622,6 @@
 		};
 		CE39E87A1D1DAEE70004FE95 /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-alpha";
 				CURRENT_PROJECT_VERSION = 1;
@@ -653,7 +645,6 @@
 		};
 		CE39E87B1D1DAEE70004FE95 /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -671,7 +662,6 @@
 		};
 		CE39E87C1D1DAEE70004FE95 /* Alpha */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = WBooksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -684,7 +674,6 @@
 		};
 		CE39E8811D1DAEF20004FE95 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E17065131F75B6A10042755C /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -734,7 +723,6 @@
 		};
 		CE39E8821D1DAEF20004FE95 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E17065131F75B6A10042755C /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-release";
 				CURRENT_PROJECT_VERSION = 1;
@@ -757,7 +745,6 @@
 		};
 		CE39E8831D1DAEF20004FE95 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E17065131F75B6A10042755C /* Release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -775,7 +762,6 @@
 		};
 		CE39E8841D1DAEF20004FE95 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E17065131F75B6A10042755C /* Release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = WBooksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -788,7 +774,6 @@
 		};
 		E12DE15E1F772A1E0072C2FF /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E12DE1621F772A370072C2FF /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -837,7 +822,6 @@
 		};
 		E12DE15F1F772A1E0072C2FF /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E12DE1621F772A370072C2FF /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-production";
 				CURRENT_PROJECT_VERSION = 1;
@@ -860,7 +844,6 @@
 		};
 		E12DE1601F772A1E0072C2FF /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E12DE1621F772A370072C2FF /* Production.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -878,7 +861,6 @@
 		};
 		E12DE1611F772A1E0072C2FF /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E12DE1621F772A370072C2FF /* Production.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = WBooksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
