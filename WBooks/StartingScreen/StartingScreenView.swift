@@ -10,8 +10,8 @@ import UIKit
 import WolmoCore
 
 class StartingScreenView: UIView, NibLoadable {
-    @IBOutlet weak var startingScreenLoginButton: UIButton!
-    @IBAction func startingScreenLoginButton(_ sender: UIButton) {
+    @IBOutlet weak var startingScreenButton: UIButton!
+    @IBAction func startingScreenButton(_ sender: UIButton) {
          print("Button has been pressed")
     }
     

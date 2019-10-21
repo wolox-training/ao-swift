@@ -16,23 +16,45 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecG-k2-dla">
-                    <rect key="frame" x="149.5" y="438" width="115" height="30"/>
-                    <state key="normal" title="Boton de prueba"/>
-                    <connections>
-                        <action selector="startingScreenLoginButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="tsu-ug-VWn"/>
-                    </connections>
-                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_inicio" translatesAutoresizingMaskIntoConstraints="NO" id="gCT-Tn-dOw">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="QZB-hq-q2e">
+                    <rect key="frame" x="127" y="348" width="161" height="211"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-WE-c47">
+                            <rect key="frame" x="0.0" y="0.0" width="161.00000000000003" height="122"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-1s-yVg">
+                            <rect key="frame" x="23" y="181" width="115" height="30"/>
+                            <state key="normal" title="Boton de prueba">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="startingScreenButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="nBq-87-uYR"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ecG-k2-dla" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="2v8-zf-fH7"/>
-                <constraint firstItem="ecG-k2-dla" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="ZWk-yG-UtH"/>
+                <constraint firstItem="QZB-hq-q2e" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="55J-An-RUX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gCT-Tn-dOw" secondAttribute="trailing" id="AD5-Jn-hHm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gCT-Tn-dOw" secondAttribute="bottom" id="PoL-yv-X8d"/>
+                <constraint firstItem="gCT-Tn-dOw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hRX-AN-gqa"/>
+                <constraint firstItem="gCT-Tn-dOw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="mCV-dM-acN"/>
+                <constraint firstItem="QZB-hq-q2e" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="yd8-UX-lSt"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="startingScreenLoginButton" destination="ecG-k2-dla" id="oOq-3p-UuJ"/>
+                <outlet property="startingScreenButton" destination="L8G-1s-yVg" id="UbI-fS-W3D"/>
             </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
         </view>
     </objects>
+    <resources>
+        <image name="Group" width="161" height="122"/>
+        <image name="bc_inicio" width="375" height="667"/>
+    </resources>
 </document>
