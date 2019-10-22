@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,32 +19,45 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_inicio" translatesAutoresizingMaskIntoConstraints="NO" id="gCT-Tn-dOw">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="QZB-hq-q2e">
-                    <rect key="frame" x="127" y="348" width="161" height="211"/>
-                    <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-WE-c47">
-                            <rect key="frame" x="0.0" y="0.0" width="161.00000000000003" height="122"/>
-                        </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-1s-yVg">
-                            <rect key="frame" x="23" y="181" width="115" height="30"/>
-                            <state key="normal" title="Boton de prueba">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </state>
-                            <connections>
-                                <action selector="startingScreenButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="nBq-87-uYR"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed, developed and used by woloxers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICb-rN-clc">
+                    <rect key="frame" x="41.666666666666657" y="801" width="331" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-1s-yVg">
+                    <rect key="frame" x="82" y="481" width="250" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="iJ1-9m-Pb8"/>
+                        <constraint firstAttribute="width" constant="250" id="mNM-d5-cbh"/>
+                    </constraints>
+                    <state key="normal" title="INGRESAR CON GOOGLE">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="startingScreenButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="nBq-87-uYR"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-WE-c47">
+                    <rect key="frame" x="114.99999999999999" y="294" width="184.00000000000003" height="135"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="184" id="Ejr-qQ-P0M"/>
+                        <constraint firstAttribute="height" constant="135" id="jJw-Ub-oMt"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="QZB-hq-q2e" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="55J-An-RUX"/>
+                <constraint firstItem="L8G-1s-yVg" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="50" id="6ur-u4-oZU"/>
+                <constraint firstItem="2Qu-WE-c47" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="250" id="7nP-7L-HLC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gCT-Tn-dOw" secondAttribute="trailing" id="AD5-Jn-hHm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ICb-rN-clc" secondAttribute="bottom" constant="40" id="GHw-RU-PZ4"/>
+                <constraint firstItem="L8G-1s-yVg" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="KjZ-v9-8V3"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gCT-Tn-dOw" secondAttribute="bottom" id="PoL-yv-X8d"/>
                 <constraint firstItem="gCT-Tn-dOw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hRX-AN-gqa"/>
+                <constraint firstItem="ICb-rN-clc" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="lsB-QY-H0J"/>
                 <constraint firstItem="gCT-Tn-dOw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="mCV-dM-acN"/>
-                <constraint firstItem="QZB-hq-q2e" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="yd8-UX-lSt"/>
+                <constraint firstItem="2Qu-WE-c47" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="ueW-Aq-xEX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>

@@ -10,7 +10,13 @@ import UIKit
 import WolmoCore
 
 class StartingScreenView: UIView, NibLoadable {
-    @IBOutlet weak var startingScreenButton: UIButton!
+    @IBOutlet weak var startingScreenButton: UIButton! {
+        didSet {
+            startingScreenButton.layer.cornerRadius = 20
+            startingScreenButton.layer.borderWidth = 1
+            startingScreenButton.layer.borderColor = UIColor.white.cgColor
+        }
+    }
     @IBAction func startingScreenButton(_ sender: UIButton) {
          print("Button has been pressed")
     }
