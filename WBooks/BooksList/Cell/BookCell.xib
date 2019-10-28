@@ -63,6 +63,11 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bookCellAuthor" destination="aVP-eO-whD" id="BuP-YG-Cy0"/>
+                <outlet property="bookCellImg" destination="6kQ-ne-GjL" id="ao5-z3-cHP"/>
+                <outlet property="bookCelltitle" destination="7Ky-pR-HND" id="r96-OS-SLj"/>
+            </connections>
         </view>
     </objects>
 </document>

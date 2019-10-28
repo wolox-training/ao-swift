@@ -13,8 +13,8 @@
 		3209D9B6235E4BC00039AD31 /* StartingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3209D9B5235E4BC00039AD31 /* StartingScreenController.swift */; };
 		3209D9B8235E4C520039AD31 /* StartingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3209D9B7235E4C520039AD31 /* StartingScreenView.swift */; };
 		3209D9BA235E4DF90039AD31 /* StartingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3209D9B9235E4DF90039AD31 /* StartingScreenView.xib */; };
-		32D87BA7236787820060F515 /* bookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D87BA6236787820060F515 /* bookCell.swift */; };
-		32D87BA9236787A00060F515 /* bookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D87BA8236787A00060F515 /* bookCell.xib */; };
+		32D87BA7236787820060F515 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D87BA6236787820060F515 /* BookCell.swift */; };
+		32D87BA9236787A00060F515 /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D87BA8236787A00060F515 /* BookCell.xib */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
 		9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* WBooksTests.swift */; };
@@ -82,8 +82,8 @@
 		3278DC692357A68C00AD7812 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		3278DC6A2357A6A400AD7812 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		3278DC6B2357A6B000AD7812 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		32D87BA6236787820060F515 /* bookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookCell.swift; sourceTree = "<group>"; };
-		32D87BA8236787A00060F515 /* bookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bookCell.xib; sourceTree = "<group>"; };
+		32D87BA6236787820060F515 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		32D87BA8236787A00060F515 /* BookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D15750B1CB1B27500EA395E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,8 +178,8 @@
 		32D87BA52367875B0060F515 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				32D87BA6236787820060F515 /* bookCell.swift */,
-				32D87BA8236787A00060F515 /* bookCell.xib */,
+				32D87BA6236787820060F515 /* BookCell.swift */,
+				32D87BA8236787A00060F515 /* BookCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -396,7 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32D87BA9236787A00060F515 /* bookCell.xib in Resources */,
+				32D87BA9236787A00060F515 /* BookCell.xib in Resources */,
 				3209D9BA235E4DF90039AD31 /* StartingScreenView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
@@ -470,7 +470,7 @@
 			files = (
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
-				32D87BA7236787820060F515 /* bookCell.swift in Sources */,
+				32D87BA7236787820060F515 /* BookCell.swift in Sources */,
 				3209D9B6235E4BC00039AD31 /* StartingScreenController.swift in Sources */,
 				3209D9B8235E4C520039AD31 /* StartingScreenView.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
