@@ -18,5 +18,4 @@ class BookListView: UIView, NibLoadable {
         }
     }
 
-
 }
