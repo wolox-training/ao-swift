@@ -7,21 +7,31 @@
 //
 
 import UIKit
+import WolmoCore
 
-class BookCell: UITableViewCell {
+class BookCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var bookCellImg: UIImageView!
-    @IBOutlet weak var bookCelltitle: UILabel!
+    @IBOutlet weak var bookCellTitle: UILabel!
     @IBOutlet weak var bookCellAuthor: UILabel!
-    
+    @IBOutlet weak var cellBackground: UIView! {
+        didSet {
+            cellBackground.layer.cornerRadius = 5
+            cellBackground.backgroundColor = .white
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backgroundColor = .clear
+    }
+    
+    func configureCell(with book: Book) {
+        self.bookCellTitle.text = book.bookCellTitle
+        self.bookCellAuthor.text = book.bookCellAuthor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }
