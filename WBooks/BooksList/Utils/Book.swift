@@ -8,13 +8,8 @@
 
 import UIKit
 
-struct Book: Codable {
-    
+struct Book {
     var bookCellTitle: String?
     var bookCellAuthor: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case bookCellTitle
-        case bookCellAuthor
-    }
+    var bookCellImg: UIImage?
 }
