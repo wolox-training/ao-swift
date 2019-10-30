@@ -34,7 +34,7 @@ class BookListController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let itemCell: BookCell = tableView.dequeue(cell: BookCell.self)!
+        guard let itemCell: BookCell = tableView.dequeue(cell: BookCell.self) else { return UITableViewCell() }
         let book: Book = bookList[indexPath.row]
         itemCell.configureCell(with: book)
         return itemCell

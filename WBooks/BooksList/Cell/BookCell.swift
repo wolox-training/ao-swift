@@ -26,9 +26,9 @@ class BookCell: UITableViewCell, NibLoadable {
     }
     
     func configureCell(with book: Book) {
-        self.bookCellTitle.text = book.bookCellTitle
-        self.bookCellAuthor.text = book.bookCellAuthor
-        self.bookCellImg.image = book.bookCellImg
+        bookCellTitle.text = book.title
+        bookCellAuthor.text = book.author
+        bookCellImg.image = book.image
     }
 
 }

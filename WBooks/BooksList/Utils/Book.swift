@@ -9,7 +9,7 @@
 import UIKit
 
 struct Book {
-    var bookCellTitle: String?
-    var bookCellAuthor: String?
-    var bookCellImg: UIImage?
+    var title: String?
+    var author: String?
+    var image: UIImage?
 }
