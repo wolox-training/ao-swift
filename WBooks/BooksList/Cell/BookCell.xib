@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BookCell" customModule="WBooks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZf-It-t1S">
+                    <rect key="frame" x="20" y="5" width="295" height="110"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78W-PG-xlo">
+                            <rect key="frame" x="30" y="15" width="265" height="80"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xyd-qz-6zb">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="cMB-mS-cRb"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yw1-sF-AYn">
+                                    <rect key="frame" x="59" y="0.0" width="206" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=compact-widthClass=compact">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    </variation>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pap-fn-mUH">
+                                    <rect key="frame" x="59" y="25.5" width="206" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=compact-widthClass=compact">
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    </variation>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Pap-fn-mUH" firstAttribute="leading" secondItem="xyd-qz-6zb" secondAttribute="trailing" constant="19" id="4e0-a3-pKZ"/>
+                                <constraint firstItem="yw1-sF-AYn" firstAttribute="top" secondItem="78W-PG-xlo" secondAttribute="top" id="E5B-1M-gbE"/>
+                                <constraint firstItem="Pap-fn-mUH" firstAttribute="top" secondItem="yw1-sF-AYn" secondAttribute="bottom" constant="6" id="J16-LP-f8L"/>
+                                <constraint firstAttribute="trailing" secondItem="yw1-sF-AYn" secondAttribute="trailing" id="bVm-zF-wiS"/>
+                                <constraint firstAttribute="trailing" secondItem="Pap-fn-mUH" secondAttribute="trailing" id="bgz-gD-CRh"/>
+                                <constraint firstItem="xyd-qz-6zb" firstAttribute="leading" secondItem="78W-PG-xlo" secondAttribute="leading" id="mpo-Ub-Ksf"/>
+                                <constraint firstAttribute="bottom" secondItem="xyd-qz-6zb" secondAttribute="bottom" id="tZN-1E-fkS"/>
+                                <constraint firstItem="xyd-qz-6zb" firstAttribute="top" secondItem="78W-PG-xlo" secondAttribute="top" id="vuy-IT-4vG"/>
+                                <constraint firstItem="yw1-sF-AYn" firstAttribute="leading" secondItem="xyd-qz-6zb" secondAttribute="trailing" constant="19" id="wjt-WC-k6C"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="78W-PG-xlo" secondAttribute="trailing" id="RcT-Ze-nHI"/>
+                        <constraint firstItem="78W-PG-xlo" firstAttribute="leading" secondItem="hZf-It-t1S" secondAttribute="leading" constant="30" id="fWu-Jn-HhO"/>
+                        <constraint firstItem="78W-PG-xlo" firstAttribute="top" secondItem="hZf-It-t1S" secondAttribute="top" constant="15" id="mQa-E4-7On"/>
+                        <constraint firstAttribute="bottom" secondItem="78W-PG-xlo" secondAttribute="bottom" constant="15" id="u4y-Od-yeX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hZf-It-t1S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="IFo-hm-Prk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hZf-It-t1S" secondAttribute="trailing" constant="20" id="PYO-uX-dX2"/>
+                <constraint firstItem="hZf-It-t1S" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gk9-nr-TLz"/>
+                <constraint firstAttribute="bottom" secondItem="hZf-It-t1S" secondAttribute="bottom" constant="5" id="wHS-Re-kfD"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bookCellAuthor" destination="Pap-fn-mUH" id="KBc-2Z-pxL"/>
+                <outlet property="bookCellImg" destination="xyd-qz-6zb" id="7Xt-yC-Uxr"/>
+                <outlet property="bookCellTitle" destination="yw1-sF-AYn" id="K0O-EO-TKp"/>
+                <outlet property="cellBackground" destination="hZf-It-t1S" id="xef-hO-tww"/>
+            </connections>
+        </view>
+    </objects>
+</document>
