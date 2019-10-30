@@ -13,6 +13,9 @@
 		3209D9B6235E4BC00039AD31 /* StartingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3209D9B5235E4BC00039AD31 /* StartingScreenController.swift */; };
 		3209D9B8235E4C520039AD31 /* StartingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3209D9B7235E4C520039AD31 /* StartingScreenView.swift */; };
 		3209D9BA235E4DF90039AD31 /* StartingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3209D9B9235E4DF90039AD31 /* StartingScreenView.xib */; };
+		327EA4A9236A28C100FEA6FE /* NavigationBarCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EA4A8236A28C100FEA6FE /* NavigationBarCotroller.swift */; };
+		327EA4AC236A2E9300FEA6FE /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EA4AB236A2E9300FEA6FE /* Images.swift */; };
+		327EA4B0236A3E9700FEA6FE /* NavBarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EA4AF236A3E9700FEA6FE /* NavBarButtons.swift */; };
 		328B6AFE2368A93F0035290C /* BookListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328B6AFD2368A93F0035290C /* BookListController.swift */; };
 		328B6B002368A98A0035290C /* BookListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 328B6AFF2368A98A0035290C /* BookListView.xib */; };
 		328B6B022368A9C50035290C /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328B6B012368A9C50035290C /* BookListView.swift */; };
@@ -88,6 +91,9 @@
 		3278DC692357A68C00AD7812 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		3278DC6A2357A6A400AD7812 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		3278DC6B2357A6B000AD7812 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		327EA4A8236A28C100FEA6FE /* NavigationBarCotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarCotroller.swift; sourceTree = "<group>"; };
+		327EA4AB236A2E9300FEA6FE /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		327EA4AF236A3E9700FEA6FE /* NavBarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtons.swift; sourceTree = "<group>"; };
 		328B6AFD2368A93F0035290C /* BookListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListController.swift; sourceTree = "<group>"; };
 		328B6AFF2368A98A0035290C /* BookListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookListView.xib; sourceTree = "<group>"; };
 		328B6B012368A9C50035290C /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
@@ -179,6 +185,24 @@
 			path = StartingScreen;
 			sourceTree = "<group>";
 		};
+		327EA4A7236A287B00FEA6FE /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				327EA4A8236A28C100FEA6FE /* NavigationBarCotroller.swift */,
+			);
+			path = Navigators;
+			sourceTree = "<group>";
+		};
+		327EA4AA236A2E4700FEA6FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				328B6B082368C7160035290C /* Colors.swift */,
+				327EA4AB236A2E9300FEA6FE /* Images.swift */,
+				327EA4AF236A3E9700FEA6FE /* NavBarButtons.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		328B6B052368C37F0035290C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +257,8 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				327EA4AA236A2E4700FEA6FE /* Extensions */,
+				327EA4A7236A287B00FEA6FE /* Navigators */,
 				32D87BA4236786D00060F515 /* BooksList */,
 				3209D9B4235E4B780039AD31 /* StartingScreen */,
 				E1530D9A1ED378F9002A9002 /* Services */,
@@ -241,7 +267,6 @@
 				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
-				328B6B082368C7160035290C /* Colors.swift */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -499,13 +524,16 @@
 				328B6B092368C7160035290C /* Colors.swift in Sources */,
 				328B6B072368C39C0035290C /* BookItemInfo.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
+				327EA4AC236A2E9300FEA6FE /* Images.swift in Sources */,
 				32D87BA7236787820060F515 /* BookCell.swift in Sources */,
 				3209D9B6235E4BC00039AD31 /* StartingScreenController.swift in Sources */,
 				3209D9B8235E4C520039AD31 /* StartingScreenView.swift in Sources */,
 				328B6B042368C3040035290C /* Book.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				328B6AFE2368A93F0035290C /* BookListController.swift in Sources */,
+				327EA4A9236A28C100FEA6FE /* NavigationBarCotroller.swift in Sources */,
 				328B6B022368A9C50035290C /* BookListView.swift in Sources */,
+				327EA4B0236A3E9700FEA6FE /* NavBarButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkActivityLogger.shared.startLogging()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = BookListController()
+        window?.rootViewController = NavigationBarCotroller(rootViewController: BookListController())
         window?.makeKeyAndVisible()
         
         return true
