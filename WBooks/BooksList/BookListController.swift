@@ -18,11 +18,22 @@ class BookListController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTable()
+        bookList = BookItemInfo.sharedInstance.getBookList()
+        configureNavBar()
+    }
+    
+    private func configureTable() {
         _view.bookListTable.delegate = self
         _view.bookListTable.dataSource = self
         _view.bookListTable.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         _view.bookListTable.register(cell: BookCell.self)
-        bookList = BookItemInfo.sharedInstance.getBookList()
+    }
+    
+    private func configureNavBar() {
+        title = "LIBRARY"
+        navigationItem.rightBarButtonItem = UIBarButtonItem.searchButton
+        navigationItem.leftBarButtonItem = UIBarButtonItem.notificationsButton
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

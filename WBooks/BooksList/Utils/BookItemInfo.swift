@@ -17,19 +17,19 @@ class BookItemInfo: NSObject {
     func getBookList() -> [Book] {
         var array: [Book] = []
         
-        let bookItemOne = Book(title: "A Little Bird Told Me", author: "Timothy Cross", image: UIImage(named: "book_1"))
+        let bookItemOne = Book(title: "A Little Bird Told Me", author: "Timothy Cross", image: UIImage.bookLitleBird)
         array.append(bookItemOne)
         
-        let bookItemTwo = Book(title: "When the Doves Disappeared", author: "Sofi Oksanen", image: UIImage(named: "book_2"))
+        let bookItemTwo = Book(title: "When the Doves Disappeared", author: "Sofi Oksanen", image: UIImage.bookDovesDisappeared)
         array.append(bookItemTwo)
         
-        let bookItemThree = Book(title: "The Best Book in the World", author: "Peter Sjernstrom", image: UIImage(named: "book_3"))
+        let bookItemThree = Book(title: "The Best Book in the World", author: "Peter Sjernstrom", image: UIImage.bookTheBestBook)
         array.append(bookItemThree)
         
-        let bookItemFour = Book(title: "Be Creative", author: "Tony Alcazar", image: UIImage(named: "book_4"))
+        let bookItemFour = Book(title: "Be Creative", author: "Tony Alcazar", image: UIImage.bookBeCreative)
         array.append(bookItemFour)
         
-        let bookItemFive = Book(title: "Redesign the Web", author: "Liliana Castilla", image: UIImage(named: "book_5"))
+        let bookItemFive = Book(title: "Redesign the Web", author: "Liliana Castilla", image: UIImage.bookRedesignWeb)
         array.append(bookItemFive)
         
         return array
