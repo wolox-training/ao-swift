@@ -22,16 +22,16 @@ class TabBarController: UITabBarController {
         let tabButtonLibrary = NavigationBarCotroller(rootViewController: BookListController())
         tabButtonLibrary.tabBarItem = UITabBarItem.tabButtonLibrary
         
-        let tabButtonWishlist = NavigationBarCotroller(rootViewController: BookListController())
+        let tabButtonWishlist = NavigationBarCotroller(rootViewController: WishlistController())
         tabButtonWishlist.tabBarItem = UITabBarItem.tabButtonWishlist
         
-        let tabButtonSuggest = NavigationBarCotroller(rootViewController: BookListController())
+        let tabButtonSuggest = NavigationBarCotroller(rootViewController: SuggestController())
         tabButtonSuggest.tabBarItem = UITabBarItem.tabButtonSuggest
         
-        let tabButtonRentals = NavigationBarCotroller(rootViewController: BookListController())
+        let tabButtonRentals = NavigationBarCotroller(rootViewController: RentalsController())
         tabButtonRentals.tabBarItem = UITabBarItem.tabButtonRentals
         
-        let tabButtonSettings = NavigationBarCotroller(rootViewController: BookListController())
+        let tabButtonSettings = NavigationBarCotroller(rootViewController: SettingsController())
         tabButtonSettings.tabBarItem = UITabBarItem.tabButtonSettings
         
         viewControllers = [tabButtonLibrary, tabButtonWishlist, tabButtonSuggest, tabButtonRentals, tabButtonSettings]
