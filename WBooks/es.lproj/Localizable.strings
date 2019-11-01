@@ -6,15 +6,15 @@
   Copyright © 2019 Wolox. All rights reserved.
 */
 // MARK: Tiltes Nav Bar
-"LIBRARY_TITLE" = "LIBRARY";
-"WISHLIST_TITLE" = "WISHLIST";
-"SUGGEST_TITLE" = "SUGGEST BOOK";
-"RENTALS_TITLE" = "RENTALS";
-"SETTINGS_TITLE" = "SETTINGS";
+"LIBRARY_TITLE" = "BIBLIOTECA";
+"WISHLIST_TITLE" = "LISTA DE DESEOS";
+"SUGGEST_TITLE" = "SUGERIR LIBRO";
+"RENTALS_TITLE" = "ALQUILERES";
+"SETTINGS_TITLE" = "AJUSTES";
 
 //MARK: Titles Tab Bar
-"LIBRARY" = "Library";
-"WISHLIST" = "Wishlist";
-"SUGGEST" = "Suggest";
-"RENTALS" = "Rentals";
-"SETTINGS" = "Settings";
+"LIBRARY" = "Biblioteca";
+"WISHLIST" = "Deseos";
+"SUGGEST" = "Sugerir";
+"RENTALS" = "Alquieres";
+"SETTINGS" = "Ajustes";
