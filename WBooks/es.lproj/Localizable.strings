@@ -5,8 +5,16 @@
   Created by Andy Francisco Olarte Cardona on 31/10/19.
   Copyright © 2019 Wolox. All rights reserved.
 */
+// MARK: Tiltes Nav Bar
 "LIBRARY_TITLE" = "LIBRARY";
 "WISHLIST_TITLE" = "WISHLIST";
 "SUGGEST_TITLE" = "SUGGEST BOOK";
 "RENTALS_TITLE" = "RENTALS";
 "SETTINGS_TITLE" = "SETTINGS";
+
+//MARK: Titles Tab Bar
+"LIBRARY" = "Library";
+"WISHLIST" = "Wishlist";
+"SUGGEST" = "Suggest";
+"RENTALS" = "Rentals";
+"SETTINGS" = "Settings";
