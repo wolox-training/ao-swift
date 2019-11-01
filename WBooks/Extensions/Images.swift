@@ -9,6 +9,9 @@
 import UIKit
 
 extension UIImage {
+    
+    // MARK: Icons books
+    
     public static var bookLitleBird: UIImage {
         return UIImage(named: "book_1")!
     }
@@ -29,6 +32,8 @@ extension UIImage {
         return UIImage(named: "book_5")!
     }
     
+    //MARK: Icons Nav Bar
+    
     public static var backgroundNavBar: UIImage {
         return UIImage(named: "bc_nav_bar")!
     }
@@ -43,6 +48,48 @@ extension UIImage {
     
     public static var iconBack: UIImage {
         return UIImage(named: "ic_back")!
+    }
+    
+    //MARK: Icons Tab Bar
+    
+    public static var iconAddNewActive: UIImage {
+        return UIImage(named: "ic_add_new_active")!
+    }
+    
+    public static var iconAddNewInactive: UIImage {
+        return UIImage(named: "ic_add_new")!
+    }
+    
+    public static var iconLibraryActive: UIImage {
+        return UIImage(named: "ic_library_active")!
+    }
+    
+    public static var iconLibraryInactive: UIImage {
+        return UIImage(named: "ic_library")!
+    }
+    
+    public static var iconRentalsActive: UIImage {
+        return UIImage(named: "ic_myrentals_active")!
+    }
+    
+    public static var iconRentalsInactive: UIImage {
+        return UIImage(named: "ic_myrentals")!
+    }
+    
+    public static var iconSettingsActive: UIImage {
+        return UIImage(named: "ic_settings_active")!
+    }
+    
+    public static var iconSettingsInactive: UIImage {
+        return UIImage(named: "ic_settings")!
+    }
+    
+    public static var iconStarActive: UIImage {
+        return UIImage(named: "ic_wishlist_active")!
+    }
+    
+    public static var iconStarInactive: UIImage {
+        return UIImage(named: "ic_wishlist")!
     }
 
 }
