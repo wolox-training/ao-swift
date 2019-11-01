@@ -1,0 +1,20 @@
+/* 
+  localizable.strings
+  WBooks
+
+  Created by Andy Francisco Olarte Cardona on 31/10/19.
+  Copyright © 2019 Wolox. All rights reserved.
+*/
+// MARK: Tiltes Nav Bar
+"LIBRARY_TITLE" = "BIBLIOTECA";
+"WISHLIST_TITLE" = "LISTA DE DESEOS";
+"SUGGEST_TITLE" = "SUGERIR LIBRO";
+"RENTALS_TITLE" = "ALQUILERES";
+"SETTINGS_TITLE" = "AJUSTES";
+
+//MARK: Titles Tab Bar
+"LIBRARY" = "Biblioteca";
+"WISHLIST" = "Deseos";
+"SUGGEST" = "Sugerir";
+"RENTALS" = "Alquieres";
+"SETTINGS" = "Ajustes";

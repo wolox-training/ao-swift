@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WolmoCore
 
 class BookListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var bookList: [Book] = []
@@ -31,7 +32,7 @@ class BookListController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     private func configureNavBar() {
-        title = "LIBRARY"
+        title = "LIBRARY_TITLE".localized()
         navigationItem.rightBarButtonItem = UIBarButtonItem.searchButton
         navigationItem.leftBarButtonItem = UIBarButtonItem.notificationsButton
     }
