@@ -1,19 +1,15 @@
 //
-//  BookItemInfo.swift
+//  BookListViewModel.swift
 //  WBooks
 //
-//  Created by Andy Francisco Olarte Cardona on 29/10/19.
+//  Created by Andy Francisco Olarte Cardona on 7/11/19.
 //  Copyright © 2019 Wolox. All rights reserved.
 //
 
 import UIKit
 
-class BookItemInfo: NSObject {
-    
-    public static let sharedInstance = BookItemInfo()
-    
-    override init() {}
-    
+class BookListViewModel {
+
     func getBookList() -> [Book] {
         var array: [Book] = []
         

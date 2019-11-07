@@ -11,6 +11,7 @@ import WolmoCore
 
 class BookListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var bookList: [Book] = []
+    var bookListViewModel = BookListViewModel()
     private let _view: BookListView = BookListView.loadFromNib()!
     
     override func loadView() {
@@ -20,7 +21,7 @@ class BookListController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
-        bookList = BookItemInfo.sharedInstance.getBookList()
+        bookList = bookListViewModel.getBookList()
         configureNavBar()
     }
     
