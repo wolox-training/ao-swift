@@ -11,11 +11,11 @@ import WolmoCore
 
 class BookListView: UIView, NibLoadable {
 
-    @IBOutlet weak var bookListTable: UITableView! {
-        didSet {
-            bookListTable.backgroundColor = .backgroundPolar()
-            bookListTable.separatorStyle = .none
-        }
+    @IBOutlet weak var bookListTable: UITableView!
+
+    func initBookListTableView() {
+        bookListTable.backgroundColor = .backgroundPolar()
+        bookListTable.separatorStyle = .none
     }
 
 }

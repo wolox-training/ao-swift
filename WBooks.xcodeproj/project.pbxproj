@@ -37,6 +37,8 @@
 		328B6B022368A9C50035290C /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328B6B012368A9C50035290C /* BookListView.swift */; };
 		328B6B042368C3040035290C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328B6B032368C3040035290C /* Book.swift */; };
 		328B6B092368C7160035290C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328B6B082368C7160035290C /* Colors.swift */; };
+		32A4DF3E237C9B0500C2204A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A4DF3D237C9B0500C2204A /* Kingfisher.framework */; };
+		32A8C348237B50330026E581 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A8C347237B50330026E581 /* BookRepository.swift */; };
 		32D87BA7236787820060F515 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D87BA6236787820060F515 /* BookCell.swift */; };
 		32D87BA9236787A00060F515 /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D87BA8236787A00060F515 /* BookCell.xib */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
@@ -131,6 +133,8 @@
 		328B6B012368A9C50035290C /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
 		328B6B032368C3040035290C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		328B6B082368C7160035290C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		32A4DF3D237C9B0500C2204A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		32A8C347237B50330026E581 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		32D87BA6236787820060F515 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		32D87BA8236787A00060F515 /* BookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A4DF3E237C9B0500C2204A /* Kingfisher.framework in Frameworks */,
 				E1530D9E1ED382EA002A9002 /* SystemConfiguration.framework in Frameworks */,
 				E1530D991ED378F2002A9002 /* Rollbar.framework in Frameworks */,
 				CED934891E8466A60017CF96 /* ReactiveSwift.framework in Frameworks */,
@@ -353,6 +358,7 @@
 				9D1575101CB1B27500EA395E /* Info.plist */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
 				326C1AD7236B75F800285904 /* Localizable.strings */,
+				32A8C347237B50330026E581 /* BookRepository.swift */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -378,6 +384,7 @@
 		9D6E405F1CB1BA21008CE558 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32A4DF3D237C9B0500C2204A /* Kingfisher.framework */,
 				B83388D021E93AAC00085E26 /* Alamofire.framework */,
 				B83388CF21E93AAC00085E26 /* AlamofireNetworkActivityIndicator.framework */,
 				B83388CE21E93AAC00085E26 /* AlamofireNetworkActivityLogger.framework */,
@@ -583,9 +590,11 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = Carthage;
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -619,6 +628,7 @@
 				3272B03A236C929800E9099D /* RentalsView.swift in Sources */,
 				3272B021236C881E00E9099D /* TabBarController.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
+				32A8C348237B50330026E581 /* BookRepository.swift in Sources */,
 				327EA4AC236A2E9300FEA6FE /* Images.swift in Sources */,
 				323E7C4723746301004E3BF8 /* BookListViewModel.swift in Sources */,
 				3272B030236C91A300E9099D /* SuggestView.swift in Sources */,

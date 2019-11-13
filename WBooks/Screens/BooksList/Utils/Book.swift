@@ -8,8 +8,20 @@
 
 import UIKit
 
-struct Book {
-    var title: String?
-    var author: String?
-    var image: UIImage?
+public struct Book: Codable {
+    let id: Int
+    let title: String
+    let author: String
+    let genre: String
+    let year: String
+    let image: String
+    
+    enum BookKey: String, CodingKey {
+        case id
+        case title
+        case author
+        case genre
+        case year
+        case image
+    }
 }
