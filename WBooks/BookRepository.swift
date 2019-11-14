@@ -13,10 +13,14 @@ enum BookError: Error {
     case decodeError
 }
 
+private struct Constants {
+    static let url: String = "https://swift-training-backend.herokuapp.com/books"
+}
+
 public class BookRepository {
     
     public func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
-        let url = URL(string: "https://swift-training-backend.herokuapp.com/books")!
+        let url = URL(string: Constants.url)!
         request(url, method: .get).responseJSON { response in
             switch response.result {
             case .success(let value):
