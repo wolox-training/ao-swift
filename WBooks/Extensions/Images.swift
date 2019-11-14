@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIImage {
+
     // MARK: Icons books
     public static var bookLitleBird: UIImage {
         return UIImage(named: "book_1")!
@@ -29,6 +30,11 @@ extension UIImage {
     public static var bookRedesignWeb: UIImage {
         return UIImage(named: "book_5")!
     }
+    
+    public static var bookDefault: UIImage {
+        return UIImage(named: "book_6")!
+    }
+
     //MARK: Icons Nav Bar
     public static var backgroundNavBar: UIImage {
         return UIImage(named: "bc_nav_bar")!

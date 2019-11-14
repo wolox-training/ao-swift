@@ -6,8 +6,10 @@
 //  Copyright © 2019 Wolox. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import WolmoCore
+import Kingfisher
 
 class BookCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var bookCellImg: UIImageView!
@@ -28,7 +30,13 @@ class BookCell: UITableViewCell, NibLoadable {
     func configureCell(with book: Book) {
         bookCellTitle.text = book.title
         bookCellAuthor.text = book.author
-        bookCellImg.image = book.image
+        if let url = URL(string: book.image) {
+            let resource = ImageResource(downloadURL: url)
+            bookCellImg.kf.indicatorType = .activity
+            bookCellImg.kf.setImage(with: resource)
+        } else {
+            bookCellImg.image = UIImage.bookDefault
+        }
     }
 
 }

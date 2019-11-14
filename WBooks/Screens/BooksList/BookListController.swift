@@ -20,16 +20,26 @@ class BookListController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTable()
-        bookList = bookListViewModel.getBookList()
+        configureTableView()
+        initBookListViewModel()
         configureNavBar()
     }
     
-    private func configureTable() {
+    private func initBookListViewModel() {
+        bookListViewModel.onUpdate = { [weak self] () in
+            DispatchQueue.main.async {
+                self?._view.bookListTable.reloadData()
+            }
+        }
+        bookListViewModel.getBookList()
+    }
+    
+    private func configureTableView() {
         _view.bookListTable.delegate = self
         _view.bookListTable.dataSource = self
         _view.bookListTable.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         _view.bookListTable.register(cell: BookCell.self)
+        _view.initBookListTableView()
     }
     
     private func configureNavBar() {
@@ -43,12 +53,12 @@ class BookListController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookList.count
+        return bookListViewModel.getnumberOfCells()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let itemCell: BookCell = tableView.dequeue(cell: BookCell.self) else { return UITableViewCell() }
-        let book: Book = bookList[indexPath.row]
+        let book: Book = bookListViewModel.getCellBook(at: indexPath)
         itemCell.configureCell(with: book)
         return itemCell
     }
