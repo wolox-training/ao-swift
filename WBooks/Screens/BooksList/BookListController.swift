@@ -10,7 +10,6 @@ import UIKit
 import WolmoCore
 
 class BookListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var bookList: [Book] = []
     var bookListViewModel = BookListViewModel()
     private let _view: BookListView = BookListView.loadFromNib()!
     

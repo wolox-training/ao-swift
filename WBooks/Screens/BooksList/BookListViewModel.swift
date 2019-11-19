@@ -11,7 +11,7 @@ import UIKit
 class BookListViewModel {
     var bookRepository = BookRepository()
     
-    var bookList: [Book] = [] {
+    private var bookList: [Book] = [] {
         didSet {
             onUpdate?()
         }
