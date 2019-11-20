@@ -95,7 +95,9 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="yK4-h5-Dlf"/>
                             </constraints>
-                            <state key="normal" title="RENT"/>
+                            <state key="normal" title="RENT">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

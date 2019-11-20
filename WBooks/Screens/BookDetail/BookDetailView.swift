@@ -49,9 +49,18 @@ class BookDetailView: UIView, NibLoadable {
             bookDetailImg.image = UIImage.bookDefault
         }
         bookDetailTitle.text = bookDetail.title
-        bookDetailStatus.text = bookDetail.status
+        bookDetailStatus.text = bookDetail.bookStatus.translateBookStatus()
         bookDetailAuthor.text = bookDetail.author
         bookDetailYear.text = bookDetail.year
         bookDetailGenre.text = bookDetail.genre
+        if bookDetail.bookStatus.isBookAvailable() {
+            bookDetailStatus.textColor = .green
+            bookDetailBtnRent.layer.borderColor = UIColor.cerulean().cgColor
+            bookDetailBtnRent.setCeruleanGradient()
+        } else {
+            bookDetailStatus.textColor = .red
+            bookDetailBtnRent.layer.borderColor = UIColor.grey().cgColor
+            bookDetailBtnRent.setGreyGradient()
+        }
     }
 }

@@ -16,6 +16,9 @@ public struct Book: Codable {
     let year: String
     let image: String
     let status: String
+    var bookStatus: BookStatus {
+        return BookStatus(rawValue: status) ?? .unknown
+    }
 
     enum BookKey: String, CodingKey {
         case id
@@ -26,4 +29,25 @@ public struct Book: Codable {
         case image
         case status
     }
+}
+
+enum BookStatus: String, CaseIterable {
+    case rented
+    case inYourHands
+    case available
+    case unknown
+    
+    func translateBookStatus() -> String {
+        switch self {
+        case .available:
+            return "AVAILABLE".localized()
+        default:
+            return "UNAVAILABLE".localized()
+        }
+    }
+    
+    func isBookAvailable() -> Bool {
+        return self == .available
+    }
+    
 }
