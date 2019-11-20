@@ -8,8 +8,10 @@
 
 import UIKit
 import WolmoCore
+import Kingfisher
 
 class BookDetailView: UIView, NibLoadable {
+    @IBOutlet weak var bookDetailContainer: UIView!
     @IBOutlet weak var bookDetailImg: UIImageView!
     @IBOutlet weak var bookDetailTitle: UILabel! {
         didSet {
@@ -28,8 +30,28 @@ class BookDetailView: UIView, NibLoadable {
             bookDetailBtnWishlist.setTitleColor(.cerulean(), for: .normal)
         }
     }
+    @IBOutlet weak var bookDetailBtnRent: UIButton! {
+        didSet {
+            bookDetailBtnRent.layer.cornerRadius = 20
+            bookDetailBtnRent.layer.borderWidth = 1
+            bookDetailBtnRent.clipsToBounds = true
+        }
+    }
 
-    func initBookDetailView() {
+    func initBookDetailView(with bookDetail: Book) {
         backgroundColor = .backgroundPolar()
+        bookDetailContainer.layer.cornerRadius = 5
+        if let url = URL(string: bookDetail.image) {
+            let resource = ImageResource(downloadURL: url)
+            bookDetailImg.kf.indicatorType = .activity
+            bookDetailImg.kf.setImage(with: resource)
+        } else {
+            bookDetailImg.image = UIImage.bookDefault
+        }
+        bookDetailTitle.text = bookDetail.title
+        bookDetailStatus.text = bookDetail.status
+        bookDetailAuthor.text = bookDetail.author
+        bookDetailYear.text = bookDetail.year
+        bookDetailGenre.text = bookDetail.genre
     }
 }

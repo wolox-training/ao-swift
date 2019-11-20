@@ -22,7 +22,7 @@ class BookDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "BOOK_DETAIL".localized()
-        _view.initBookDetailView()
+        _view.initBookDetailView(with: bookDetailViewModel.bookModel)
         navigationItem.leftBarButtonItem = UIBarButtonItem.backButton(for: self, action: #selector(onPressBack))
     }
 

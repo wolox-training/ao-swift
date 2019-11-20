@@ -30,7 +30,7 @@
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXU-Yw-pow">
                                     <rect key="frame" x="89" y="7" width="175" height="29"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -95,7 +95,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="yK4-h5-Dlf"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" title="RENT"/>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -130,7 +130,9 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="bookDetailAuthor" destination="Jsn-PW-6kO" id="Xkj-pU-a09"/>
+                <outlet property="bookDetailBtnRent" destination="Ajn-cN-ehc" id="gnS-gN-AoC"/>
                 <outlet property="bookDetailBtnWishlist" destination="RUr-wh-Gh2" id="Vpw-Qd-Zcf"/>
+                <outlet property="bookDetailContainer" destination="Idl-gA-ZDY" id="IYT-UU-kWf"/>
                 <outlet property="bookDetailGenre" destination="9OQ-Tq-Jj3" id="V49-Ms-IBg"/>
                 <outlet property="bookDetailImg" destination="fDE-Jj-zXv" id="j59-eA-Apj"/>
                 <outlet property="bookDetailStatus" destination="cfK-K3-w23" id="xJV-xG-piO"/>
