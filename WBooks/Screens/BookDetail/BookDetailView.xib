@@ -138,6 +138,7 @@
                 <outlet property="bookDetailGenre" destination="9OQ-Tq-Jj3" id="V49-Ms-IBg"/>
                 <outlet property="bookDetailImg" destination="fDE-Jj-zXv" id="j59-eA-Apj"/>
                 <outlet property="bookDetailStatus" destination="cfK-K3-w23" id="xJV-xG-piO"/>
+                <outlet property="bookDetailTableComments" destination="tzD-dk-RBG" id="gLY-wr-XYU"/>
                 <outlet property="bookDetailTitle" destination="wXU-Yw-pow" id="5Za-ai-s9a"/>
                 <outlet property="bookDetailYear" destination="fw7-xt-32L" id="rRj-AT-wxy"/>
             </connections>

@@ -45,6 +45,7 @@
 		32B81EE023844B7A00ACA420 /* BookDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B81EDF23844B7A00ACA420 /* BookDetailView.xib */; };
 		32BFD82323857BF800487A9A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFD82223857BF800487A9A /* Comment.swift */; };
 		32BFD8252385C66500487A9A /* UIButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFD8242385C66500487A9A /* UIButtons.swift */; };
+		32BFD8282385D82700487A9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFD8272385D82700487A9A /* User.swift */; };
 		32C0004F237DFD400054FD02 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C0004E237DFD400054FD02 /* CommentTableViewCell.swift */; };
 		32C00051237DFD620054FD02 /* CommentTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C00050237DFD620054FD02 /* CommentTableView.xib */; };
 		32D87BA7236787820060F515 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D87BA6236787820060F515 /* BookCell.swift */; };
@@ -149,6 +150,7 @@
 		32B81EDF23844B7A00ACA420 /* BookDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailView.xib; sourceTree = "<group>"; };
 		32BFD82223857BF800487A9A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		32BFD8242385C66500487A9A /* UIButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtons.swift; sourceTree = "<group>"; };
+		32BFD8272385D82700487A9A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		32C0004E237DFD400054FD02 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		32C00050237DFD620054FD02 /* CommentTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableView.xib; sourceTree = "<group>"; };
 		32D87BA6236787820060F515 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
@@ -320,9 +322,19 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		32BFD8262385D80E00487A9A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				32BFD82223857BF800487A9A /* Comment.swift */,
+				32BFD8272385D82700487A9A /* User.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		32C0004C237DC0F00054FD02 /* BookDetail */ = {
 			isa = PBXGroup;
 			children = (
+				32BFD8262385D80E00487A9A /* Utils */,
 				32C0004D237DFCF20054FD02 /* Comment */,
 				32B81ED923844AD000ACA420 /* BookDetailViewModel.swift */,
 				32B81EDB23844B3F00ACA420 /* BookDetailViewController.swift */,
@@ -337,7 +349,6 @@
 			children = (
 				32C0004E237DFD400054FD02 /* CommentTableViewCell.swift */,
 				32C00050237DFD620054FD02 /* CommentTableView.xib */,
-				32BFD82223857BF800487A9A /* Comment.swift */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -667,6 +678,7 @@
 				3272B042236C932E00E9099D /* SettingsController.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				3272B040236C931D00E9099D /* SettingsView.swift in Sources */,
+				32BFD8282385D82700487A9A /* User.swift in Sources */,
 				328B6B092368C7160035290C /* Colors.swift in Sources */,
 				3272B03A236C929800E9099D /* RentalsView.swift in Sources */,
 				3272B021236C881E00E9099D /* TabBarController.swift in Sources */,

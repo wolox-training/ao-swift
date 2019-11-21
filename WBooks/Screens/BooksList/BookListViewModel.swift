@@ -10,27 +10,27 @@ import UIKit
 
 class BookListViewModel {
     var bookRepository = BookRepository()
-    
+
     private var bookList: [Book] = [] {
         didSet {
             onUpdate?()
         }
     }
-    
+
     var onUpdate: (() -> Void)?
-    
+
     func getnumberOfCells() -> Int {
         return bookList.count
     }
-    
+
     func getBookList() {
         bookRepository.fetchBooks(onSuccess: { (books) in
             self.bookList = books
         }, onError: { (error) in
-            print(error)
+            print(error.localizedDescription)
         })
     }
-    
+
     func getCellBook(at indexPath: IndexPath) -> Book {
         return bookList[indexPath.row]
     }

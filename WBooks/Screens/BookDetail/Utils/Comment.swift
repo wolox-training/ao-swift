@@ -10,5 +10,15 @@ import Foundation
 import UIKit
 
 public struct Comment: Codable {
+    let id: Int
+    let content: String
+    let book: Book
+    let user: BookDetailUser
 
+    enum CodingKeys: String, CodingKey {
+        case id
+        case content
+        case book
+        case user
+    }
 }

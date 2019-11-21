@@ -10,18 +10,35 @@ import Foundation
 import UIKit
 
 class  BookDetailViewModel {
+    var bookRepository = BookRepository()
 
-    private var bookComment: [Comment] = [] {
+    private var bookComments: [Comment] = [] {
         didSet {
             onUpdate?()
         }
     }
 
     let bookModel: Book!
-    
+
     init(with book: Book) {
         bookModel = book
     }
 
     var onUpdate: (() -> Void)?
+
+    func fetchComments(for book: Book) {
+        bookRepository.fetchComments(book: book, onSuccess: { (comments) in
+            self.bookComments = comments
+        }, onError: { (error) in
+            print(error.localizedDescription)
+        })
+    }
+
+    func getnumberOfCells() -> Int {
+        return bookComments.count
+    }
+
+    func getCellComment(at indexPath: IndexPath) -> Comment {
+        return bookComments[indexPath.row]
+    }
 }

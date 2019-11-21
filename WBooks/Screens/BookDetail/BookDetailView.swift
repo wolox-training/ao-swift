@@ -37,6 +37,7 @@ class BookDetailView: UIView, NibLoadable {
             bookDetailBtnRent.clipsToBounds = true
         }
     }
+    @IBOutlet weak var bookDetailTableComments: UITableView!
 
     func initBookDetailView(with bookDetail: Book) {
         backgroundColor = .backgroundPolar()
@@ -62,5 +63,9 @@ class BookDetailView: UIView, NibLoadable {
             bookDetailBtnRent.layer.borderColor = UIColor.grey().cgColor
             bookDetailBtnRent.setGreyGradient()
         }
+    }
+
+    func initBookDetailTableComment() {
+        bookDetailTableComments.separatorStyle = .none
     }
 }

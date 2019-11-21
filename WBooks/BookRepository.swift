@@ -15,10 +15,13 @@ enum BookError: Error {
 
 private struct Constants {
     static let url: String = "https://swift-training-backend.herokuapp.com/books"
+    static func endpointComment(with bookID: Int) -> String {
+        return "https://swift-training-backend.herokuapp.com/books/\(bookID)/comments"
+    }
 }
 
 public class BookRepository {
-    
+
     public func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
         let url = URL(string: Constants.url)!
         request(url, method: .get).responseJSON { response in
@@ -38,5 +41,25 @@ public class BookRepository {
             }
         }
     }
-    
+
+    public func fetchComments(book: Book, onSuccess: @escaping ([Comment]) -> Void, onError: @escaping (Error) -> Void) {
+        let url = URL(string: Constants.endpointComment(with: book.id))!
+        request(url, method: .get).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                guard let JSONComment = try? JSONSerialization.data(withJSONObject: value, options: []) else {
+                    onError(BookError.decodeError)
+                    return
+                }
+                guard let comments = try? JSONDecoder().decode([Comment].self, from: JSONComment) else {
+                    onError(BookError.decodeError)
+                    return
+                }
+                onSuccess(comments)
+            case .failure(let error):
+                onError(error)
+            }
+        }
+    }
+
 }
