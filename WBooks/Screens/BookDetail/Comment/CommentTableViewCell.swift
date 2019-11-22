@@ -25,5 +25,10 @@ class CommentTableViewCell: UITableViewCell, NibLoadable {
     func configureComment(with comment: Comment) {
         commentCellTitle.text = comment.user.username
         commentCellSubtitle.text = comment.content
+        if let url = URL(string: comment.user.image) {
+            let resource = ImageResource(downloadURL: url)
+            commentCellImg.kf.indicatorType = .activity
+            commentCellImg.kf.setImage(with: resource)
+        }
     }
 }

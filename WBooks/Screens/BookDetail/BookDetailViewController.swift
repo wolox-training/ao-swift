@@ -56,6 +56,10 @@ class BookDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         navigationController?.popViewController(animated: true)
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

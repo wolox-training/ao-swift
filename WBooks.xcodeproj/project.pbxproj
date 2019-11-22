@@ -47,7 +47,7 @@
 		32BFD8252385C66500487A9A /* UIButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFD8242385C66500487A9A /* UIButtons.swift */; };
 		32BFD8282385D82700487A9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFD8272385D82700487A9A /* User.swift */; };
 		32C0004F237DFD400054FD02 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C0004E237DFD400054FD02 /* CommentTableViewCell.swift */; };
-		32C00051237DFD620054FD02 /* CommentTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C00050237DFD620054FD02 /* CommentTableView.xib */; };
+		32C00051237DFD620054FD02 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C00050237DFD620054FD02 /* CommentTableViewCell.xib */; };
 		32D87BA7236787820060F515 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D87BA6236787820060F515 /* BookCell.swift */; };
 		32D87BA9236787A00060F515 /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D87BA8236787A00060F515 /* BookCell.xib */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
@@ -152,7 +152,7 @@
 		32BFD8242385C66500487A9A /* UIButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtons.swift; sourceTree = "<group>"; };
 		32BFD8272385D82700487A9A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		32C0004E237DFD400054FD02 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
-		32C00050237DFD620054FD02 /* CommentTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableView.xib; sourceTree = "<group>"; };
+		32C00050237DFD620054FD02 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		32D87BA6236787820060F515 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		32D87BA8236787A00060F515 /* BookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -348,7 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				32C0004E237DFD400054FD02 /* CommentTableViewCell.swift */,
-				32C00050237DFD620054FD02 /* CommentTableView.xib */,
+				32C00050237DFD620054FD02 /* CommentTableViewCell.xib */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -596,7 +596,7 @@
 				3272B036236C925D00E9099D /* SuggestView.xib in Resources */,
 				32D87BA9236787A00060F515 /* BookCell.xib in Resources */,
 				326C1AD5236B75F800285904 /* Localizable.strings in Resources */,
-				32C00051237DFD620054FD02 /* CommentTableView.xib in Resources */,
+				32C00051237DFD620054FD02 /* CommentTableViewCell.xib in Resources */,
 				3209D9BA235E4DF90039AD31 /* StartingScreenView.xib in Resources */,
 				3272B03C236C92FA00E9099D /* RentalsView.xib in Resources */,
 				3272B02E236C917500E9099D /* WishlistView.xib in Resources */,
