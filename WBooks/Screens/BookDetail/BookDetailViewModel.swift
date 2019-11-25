@@ -41,4 +41,8 @@ class  BookDetailViewModel {
     func getCellComment(at indexPath: IndexPath) -> Comment {
         return bookComments[indexPath.row]
     }
+    
+    func rentBook(book: Book, onSuccessRent: @escaping (BookDetailRent) -> Void, onFailureRent: @escaping (Error) -> Void) {
+        bookRepository.rentBook(book: book, onSuccess: onSuccessRent, onError: onFailureRent)
+    }
 }
