@@ -21,7 +21,7 @@ class BookDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         initBookDetailViewModel()
-        configureTableView()
+        configureView()
         configureNavBar()
     }
 
@@ -38,7 +38,7 @@ class BookDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         bookDetailViewModel.fetchComments(for: bookDetailViewModel.bookModel)
     }
 
-    private func configureTableView() {
+    private func configureView() {
         _view.bookDetailTableComments.delegate = self
         _view.bookDetailTableComments.dataSource = self
         _view.bookDetailTableComments.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
