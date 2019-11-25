@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct BookDetailUser: Codable {
+public struct BookDetailUser: Codable {
 
     let id: Int
     let username: String

@@ -11,9 +11,13 @@ import UIKit
 import WolmoCore
 import Kingfisher
 
-class CommentTableViewCell: UITableViewCell, NibLoadable { 
+class CommentTableViewCell: UITableViewCell, NibLoadable {
 
-    @IBOutlet weak var commentCellImg: UIImageView!
+    @IBOutlet weak var commentCellImg: UIImageView! {
+        didSet {
+            commentCellImg.layer.cornerRadius = commentCellImg.frame.size.width/2
+        }
+    }
     @IBOutlet weak var commentCellTitle: UILabel!
     @IBOutlet weak var commentCellSubtitle: UILabel!
 
