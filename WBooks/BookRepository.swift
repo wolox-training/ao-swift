@@ -45,7 +45,7 @@ public class BookRepository {
     }
 
     public func fetchComments(book: Book, onSuccess: @escaping ([Comment]) -> Void, onError: @escaping (Error) -> Void) {
-        let url = URL(string: Constants.endpointComment(with: book.id))!
+        guard let url = URL(string: Constants.endpointComment(with: book.id)) else { return }
         request(url, method: .get).responseJSON { response in
             switch response.result {
             case .success(let value):
