@@ -18,3 +18,10 @@
 "SUGGEST" = "Sugerir";
 "RENTALS" = "Alquieres";
 "SETTINGS" = "Ajustes";
+
+//MARK: Book Detail
+"BOOK_DETAIL" = "Detalle de Libro";
+"AVAILABLE" = "Disponible";
+"UNAVAILABLE" = "No Disponible";
+"RENT_UNAVAILABLE" = "No se puede realizar el Alquiler";
+"BOOK_RESERVED" = "El libro ha sido Reservado";

@@ -9,9 +9,9 @@
 import UIKit
 
 extension UIBarButtonItem {
-    
-    public static var backButton: UIBarButtonItem {
-        return UIBarButtonItem(image: UIImage.iconBack, style: UIBarButtonItem.Style.plain, target: self, action: nil)
+
+   class func backButton(for viewController: UIViewController, action: Selector) -> UIBarButtonItem {
+        return UIBarButtonItem(image: UIImage.iconBack, style: UIBarButtonItem.Style.plain, target: viewController, action: action)
     }
     
     public static var searchButton: UIBarButtonItem {

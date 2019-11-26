@@ -10,7 +10,6 @@ import UIKit
 import WolmoCore
 
 class BookListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var bookList: [Book] = []
     var bookListViewModel = BookListViewModel()
     private let _view: BookListView = BookListView.loadFromNib()!
     
@@ -64,7 +63,10 @@ class BookListController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        let book: Book = bookListViewModel.getCellBook(at: indexPath)
+        let bookDetailViewModel = BookDetailViewModel(with: book)
+        let bookDetailViewController = BookDetailViewController(with: bookDetailViewModel)
+        navigationController?.pushViewController(bookDetailViewController, animated: true)
     }
 
 }
