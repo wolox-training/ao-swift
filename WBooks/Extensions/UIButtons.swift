@@ -17,7 +17,7 @@ extension UIButton {
     }
 
     func setGreyGradient() {
-        let colors = [UIColor.grey(), UIColor.greySecondGradient(),UIColor.greyThirdGradient()]
+        let colors = [UIColor.grey(), UIColor.greySecondGradient(), UIColor.greyThirdGradient()]
         gradient = ViewGradient(colors: colors, direction: .leftToRight)
     }
 }
