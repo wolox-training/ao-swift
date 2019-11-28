@@ -30,12 +30,14 @@ class BookDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     private func initBookDetailViewModel() {
-        bookDetailViewModel.onUpdate = { [weak self] () in
-            DispatchQueue.main.async {
-                self?._view.bookDetailTableComments.reloadData()
+        bookDetailViewModel.fetchComments(book: bookDetailViewModel.bookModel).startWithResult { [unowned self] result in
+            switch result {
+            case .success:
+                self._view.bookDetailTableComments.reloadData()
+            case .failure(let error):
+                self.showMessage(message: error.localizedDescription)
             }
         }
-        bookDetailViewModel.fetchComments(for: bookDetailViewModel.bookModel)
     }
 
     private func configureView() {
@@ -43,7 +45,7 @@ class BookDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         _view.bookDetailTableComments.dataSource = self
         _view.bookDetailTableComments.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         _view.bookDetailTableComments.register(cell: CommentTableViewCell.self)
-        _view.bookDetailBtnRent.addTarget(self, action: #selector(rentBook), for: .touchUpInside)
+        _view.bookDetailBtnRent.reactive.controlEvents(.touchUpInside).observeValues { _ in self.rentBook() }
         _view.initBookDetailTableComment()
     }
 
@@ -62,11 +64,11 @@ class BookDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             showMessage(message: "RENT_UNAVAILABLE".localized(withArguments: bookDetailViewModel.bookModel.bookStatus.translateBookStatus()))
             return
         }
-        bookDetailViewModel.rentBook(book: bookDetailViewModel.bookModel, onSuccessRent: { (_) in
-            self.showMessage(message: "BOOK_RESERVED".localized())
-        }, onFailureRent: { (error) in
-            self.showMessage(message: error.localizedDescription)
-        })
+//        bookDetailViewModel.rentBook(book: bookDetailViewModel.bookModel, onSuccessRent: { (_) in
+//            self.showMessage(message: "BOOK_RESERVED".localized())
+//        }, onFailureRent: { (error) in
+//            self.showMessage(message: error.localizedDescription)
+//        })
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

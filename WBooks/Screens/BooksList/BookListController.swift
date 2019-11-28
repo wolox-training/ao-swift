@@ -25,12 +25,14 @@ class BookListController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     private func initBookListViewModel() {
-        bookListViewModel.onUpdate = { [weak self] () in
-            DispatchQueue.main.async {
-                self?._view.bookListTable.reloadData()
+        bookListViewModel.getBooks().startWithResult { [unowned self] result in
+            switch result {
+            case .success:
+                self._view.bookListTable.reloadData()
+            case .failure(let error):
+                self.showMessage(message: error.localizedDescription)
             }
         }
-        bookListViewModel.getBookList()
     }
     
     private func configureTableView() {

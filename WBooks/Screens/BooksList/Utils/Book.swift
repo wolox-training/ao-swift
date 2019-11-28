@@ -7,27 +7,46 @@
 //
 
 import UIKit
+import WolmoCore
+import Argo
+import Curry
+import Runes
 
-public struct Book: Codable {
+struct Book {
+    
     let id: Int
     let title: String
     let author: String
     let genre: String
+    let status: String
     let year: String
     let image: String
-    let status: String
     var bookStatus: BookStatus {
         return BookStatus(rawValue: status) ?? .unknown
     }
-
-    enum BookKey: String, CodingKey {
+    
+    enum CodingKeys: String, CodingKey {
         case id
         case title
         case author
         case genre
+        case status
         case year
         case image
-        case status
+    }
+}
+
+extension Book: Argo.Decodable {
+    
+    static func decode(_ json: JSON) -> Decoded<Book> {
+        return curry(Book.init)
+            <^> json <| "id"
+            <*> json <| "title"
+            <*> json <| "author"
+            <*> json <| "status"
+            <*> json <| "genre"
+            <*> json <| "year"
+            <*> json <| "image"
     }
 }
 
