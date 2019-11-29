@@ -21,7 +21,7 @@ protocol BookRepositoryType {
 
     func fetchBooks() -> SignalProducer<[Book], RepositoryError>
     func fetchComments(book: Book) -> SignalProducer<[Comment], RepositoryError>
-    func rentBook(book: Book) -> SignalProducer<BookDetailRent, RepositoryError>
+    func rentBook(book: Book) -> SignalProducer<Void, RepositoryError>
 
 }
 
@@ -45,7 +45,7 @@ public class BookRepository: AbstractRepository, BookRepositoryType {
         }
     }
     
-    func rentBook(book: Book) -> SignalProducer<BookDetailRent, RepositoryError> {
+    func rentBook(book: Book) -> SignalProducer<Void, RepositoryError> {
         let params: [String: Any] = ["userID": BookRepository.userId, "bookID": book.id, "from": Date.getDate(with: Date()), "to": Date.getDate(with: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)]
         return performRequest(method: .post, path: BookRepository.rentBookPath, parameters: params) { _ in
             Result(value: ())
