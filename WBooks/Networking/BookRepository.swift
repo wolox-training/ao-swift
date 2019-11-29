@@ -21,16 +21,15 @@ protocol BookRepositoryType {
 
     func fetchBooks() -> SignalProducer<[Book], RepositoryError>
     func fetchComments(book: Book) -> SignalProducer<[Comment], RepositoryError>
-    func rentBook(book: Book) -> SignalProducer<Void, RepositoryError>
+//    func rentBook(book: Book) -> SignalProducer<Void, RepositoryError>
 
 }
 
 public class BookRepository: AbstractRepository, BookRepositoryType {
     
-    private static let userId = 2
     private static let fetchBooksPath = "books"
     private static let fetchCommentsPath = "books/$book_id/comments"
-    private static let rentBookPath = "/users/\(userId)//rents"
+    private static let rentBookPath = "/users/2/rents"
     
     func fetchBooks() -> SignalProducer<[Book], RepositoryError> {
         return performRequest(method: .get, path: BookRepository.fetchBooksPath) { json in
@@ -45,11 +44,11 @@ public class BookRepository: AbstractRepository, BookRepositoryType {
         }
     }
     
-    func rentBook(book: Book) -> SignalProducer<Void, RepositoryError> {
-        let params: [String: Any] = ["userID": BookRepository.userId, "bookID": book.id, "from": Date.getDate(with: Date()), "to": Date.getDate(with: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)]
-        return performRequest(method: .post, path: BookRepository.rentBookPath, parameters: params) { _ in
-            Result(value: ())
-        }
-    }
+//    func rentBook(book: Book) -> SignalProducer<Void, RepositoryError> {
+//        let params: [String: Any] = ["userID": BookRepository.userId, "bookID": book.id, "from": Date.getDate(with: Date()), "to": Date.getDate(with: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)]
+//        return performRequest(method: .post, path: BookRepository.rentBookPath, parameters: params) { _ in
+//            Result(value: ())
+//        }
+//    }
 
 }
