@@ -7,32 +7,25 @@
 //
 
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import Networking
 
 class BookListViewModel {
-    var bookRepository = BookRepository()
+    private var books: MutableProperty<[Book]> = MutableProperty([])
+    var bookRepository = RepositoryBuilder.getDefaultBookRepository()
 
-    private var bookList: [Book] = [] {
-        didSet {
-            onUpdate?()
-        }
-    }
-
-    var onUpdate: (() -> Void)?
-
-    func getnumberOfCells() -> Int {
-        return bookList.count
-    }
-
-    func getBookList() {
-        bookRepository.fetchBooks(onSuccess: { (books) in
-            self.bookList = books
-        }, onError: { (error) in
-            print(error.localizedDescription)
+    func getBooks() -> SignalProducer<[Book], RepositoryError> {
+        return self.bookRepository.fetchBooks().on(failed: { [unowned self] _ in self.books.value = [] }, value: { [unowned self] value in
+            self.books.value = value
         })
+    }
+    func getnumberOfCells() -> Int {
+        return books.value.count
     }
 
     func getCellBook(at indexPath: IndexPath) -> Book {
-        return bookList[indexPath.row]
+        return books.value[indexPath.row]
     }
-
+    
 }

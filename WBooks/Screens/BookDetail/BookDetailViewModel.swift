@@ -6,17 +6,14 @@
 //  Copyright © 2019 Wolox. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import Networking
 
 class  BookDetailViewModel {
-    var bookRepository = BookRepository()
-
-    private var bookComments: [Comment] = [] {
-        didSet {
-            onUpdate?()
-        }
-    }
+    private var bookComments: MutableProperty<[Comment]> = MutableProperty([])
+    var bookRepository = RepositoryBuilder.getDefaultBookRepository()
 
     let bookModel: Book!
 
@@ -24,25 +21,19 @@ class  BookDetailViewModel {
         bookModel = book
     }
 
-    var onUpdate: (() -> Void)?
-
-    func fetchComments(for book: Book) {
-        bookRepository.fetchComments(book: book, onSuccess: { (comments) in
-            self.bookComments = comments
-        }, onError: { (error) in
-            print(error.localizedDescription)
-        })
+    func fetchComments(book: Book) -> SignalProducer<[Comment], RepositoryError> {
+        return self.bookRepository.fetchComments(book: book).on(failed: { [unowned self] _ in self.bookComments.value = [] }, value: { [unowned self] value in self.bookComments.value = value })
     }
 
     func getnumberOfCells() -> Int {
-        return bookComments.count
+        return bookComments.value.count
     }
 
     func getCellComment(at indexPath: IndexPath) -> Comment {
-        return bookComments[indexPath.row]
+        return bookComments.value[indexPath.row]
     }
     
-    func rentBook(book: Book, onSuccessRent: @escaping (BookDetailRent) -> Void, onFailureRent: @escaping (Error) -> Void) {
-        bookRepository.rentBook(book: book, onSuccess: onSuccessRent, onError: onFailureRent)
-    }
+//    func rentBook(book: Book) -> SignalProducer<Void, RepositoryError> {
+//        return bookRepository.rentBook(book: book)
+//    }
 }

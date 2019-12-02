@@ -8,17 +8,24 @@
 
 import Foundation
 import UIKit
+import Argo
+import Curry
+import Runes
 
-public struct Comment: Codable {
+struct Comment {
     let id: Int
     let content: String
     let book: Book
     let user: BookDetailUser
+}
 
-    enum CodingKeys: String, CodingKey {
-        case id
-        case content
-        case book
-        case user
+extension Comment: Argo.Decodable {
+    
+    static func decode(_ json: JSON) -> Decoded<Comment> {
+        return curry(Comment.init)
+            <^> json <| "id"
+            <*> json <| "content"
+            <*> json <| "book"
+            <*> json <| "user"
     }
 }
