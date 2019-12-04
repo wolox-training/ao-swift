@@ -11,6 +11,7 @@ import WolmoCore
 
 class BookDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     private let _view: BookDetailView = BookDetailView.loadFromNib()!
+    private let _detailView: DetailView = DetailView.loadFromNib()!
     private var bookDetailViewModel: BookDetailViewModel!
 
     convenience init(with bookDetail: BookDetailViewModel) {
@@ -25,7 +26,13 @@ class BookDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         configureNavBar()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        _detailView.initDetailView(with: bookDetailViewModel.bookModel)
+    }
+
     override func loadView() {
+        _view.detailView.addSubview(_detailView)
         view = _view
     }
 
@@ -45,13 +52,13 @@ class BookDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         _view.bookDetailTableComments.dataSource = self
         _view.bookDetailTableComments.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         _view.bookDetailTableComments.register(cell: CommentTableViewCell.self)
-        _view.bookDetailBtnRent.reactive.controlEvents(.touchUpInside).observeValues { _ in self.rentBook() }
+        _detailView.detailBtnRent.reactive.controlEvents(.touchUpInside).observeValues { _ in self.rentBook() }
         _view.initBookDetailTableComment()
     }
 
     private func configureNavBar() {
         title = "BOOK_DETAIL".localized()
-        _view.initBookDetailView(with: bookDetailViewModel.bookModel)
+        _view.initBookDetailView()
         navigationItem.leftBarButtonItem = UIBarButtonItem.backButton(for: self, action: #selector(onPressBack))
     }
 
