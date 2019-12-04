@@ -13,6 +13,8 @@
 		3209D9B6235E4BC00039AD31 /* StartingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3209D9B5235E4BC00039AD31 /* StartingScreenController.swift */; };
 		3209D9B8235E4C520039AD31 /* StartingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3209D9B7235E4C520039AD31 /* StartingScreenView.swift */; };
 		3209D9BA235E4DF90039AD31 /* StartingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3209D9B9235E4DF90039AD31 /* StartingScreenView.xib */; };
+		323A93012395746B0089641B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323A93002395746B0089641B /* DetailView.swift */; };
+		323A93032395747B0089641B /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323A93022395747B0089641B /* DetailView.xib */; };
 		323E7C4723746301004E3BF8 /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323E7C4623746301004E3BF8 /* BookListViewModel.swift */; };
 		324210C523886FE50096D06D /* BookDetailRent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324210C423886FE50096D06D /* BookDetailRent.swift */; };
 		324210C7238882610096D06D /* UIDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324210C6238882610096D06D /* UIDate.swift */; };
@@ -117,6 +119,8 @@
 		3209D9B5235E4BC00039AD31 /* StartingScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingScreenController.swift; sourceTree = "<group>"; };
 		3209D9B7235E4C520039AD31 /* StartingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingScreenView.swift; sourceTree = "<group>"; };
 		3209D9B9235E4DF90039AD31 /* StartingScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartingScreenView.xib; sourceTree = "<group>"; };
+		323A93002395746B0089641B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		323A93022395747B0089641B /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		323E7C4623746301004E3BF8 /* BookListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
 		324210C423886FE50096D06D /* BookDetailRent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailRent.swift; sourceTree = "<group>"; };
 		324210C6238882610096D06D /* UIDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDate.swift; sourceTree = "<group>"; };
@@ -247,6 +251,15 @@
 			path = StartingScreen;
 			sourceTree = "<group>";
 		};
+		323A92FF239573480089641B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				323A93002395746B0089641B /* DetailView.swift */,
+				323A93022395747B0089641B /* DetailView.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		3272B022236C887800E9099D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +367,7 @@
 		32C0004C237DC0F00054FD02 /* BookDetail */ = {
 			isa = PBXGroup;
 			children = (
+				323A92FF239573480089641B /* Detail */,
 				32BFD8262385D80E00487A9A /* Utils */,
 				32C0004D237DFCF20054FD02 /* Comment */,
 				32B81ED923844AD000ACA420 /* BookDetailViewModel.swift */,
@@ -621,6 +635,7 @@
 				3272B03C236C92FA00E9099D /* RentalsView.xib in Resources */,
 				3272B02E236C917500E9099D /* WishlistView.xib in Resources */,
 				3272B03E236C931000E9099D /* SettingsView.xib in Resources */,
+				323A93032395747B0089641B /* DetailView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 				328B6B002368A98A0035290C /* BookListView.xib in Resources */,
 			);
@@ -719,6 +734,7 @@
 				3272B024236C898600E9099D /* TabBarButtons.swift in Sources */,
 				328B6B042368C3040035290C /* Book.swift in Sources */,
 				32B81EDC23844B3F00ACA420 /* BookDetailViewController.swift in Sources */,
+				323A93012395746B0089641B /* DetailView.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				3272B02C236C90AE00E9099D /* WishlistView.swift in Sources */,
 				328B6AFE2368A93F0035290C /* BookListController.swift in Sources */,
